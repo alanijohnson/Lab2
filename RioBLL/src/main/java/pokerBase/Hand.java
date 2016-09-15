@@ -6,6 +6,10 @@ import java.util.UUID;
 
 public class Hand {
 
+	public HandScore(){
+		
+	}
 
+	public HandcScore(int)
 
 }
