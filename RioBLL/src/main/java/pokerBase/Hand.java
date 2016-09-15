@@ -10,6 +10,6 @@ public class Hand {
 		
 	}
 
-	public HandcScore(int)
+	public HandcScore(int cardnumber)
 
 }

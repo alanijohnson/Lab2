@@ -12,6 +12,14 @@ public class Test_Deck {
 		System.out.println("Print card rank: "+card.getCardRank());
 		System.out.println("Print card suit: " +card.getCardSuit());
 		System.out.println("New Size: " + deck1.getDeckSize());
+		deck1.DrawCard();
+		System.out.println("New Size: " + deck1.getDeckSize());
+		
+		ArrayList<Card> cardstack = new ArrayList<>();
+		cardstack.add(new Card((int)(Math.random()*51)));
+		System.out.println(cardstack.get(0).getCardNbr());
+		System.out.println(cardstack.get(0).getCardSuit());
+		System.out.println(cardstack.get(0).getCardRank());
 		}
 	}
 
