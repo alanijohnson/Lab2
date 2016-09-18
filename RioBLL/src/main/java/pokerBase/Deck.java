@@ -46,9 +46,14 @@ public class Deck {
 	}
 
 	public Card DrawCard() {
+		/*//Chooses random card from deck
 		int cardindex = (int) (Math.random() * mydeck.size());
 		Card card = mydeck.get(cardindex);
-		mydeck.remove(cardindex);
+		mydeck.remove(cardindex);*/
+		
+		//draw first card in deck
+		Card card = mydeck.get(0);
+		mydeck.remove(0);
 		System.out.println("Print Card: " + card);
 		System.out.println(" ");
 		// print deck

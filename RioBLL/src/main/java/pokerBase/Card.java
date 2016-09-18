@@ -24,6 +24,8 @@ public int getCardSuit(){
 public int getCardRank(){
 	return iCardRank;
 }
-	
-	
+
+    
+    
+    
 }
