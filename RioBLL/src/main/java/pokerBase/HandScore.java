@@ -12,7 +12,7 @@ public class HandScore{
 	private ArrayList<Card> Kickers = new ArrayList<>();
 	private ArrayList<Card> myHand;
 	
-	//constructors
+	//constructorss
 	public HandScore(){
 	}
 	
@@ -206,10 +206,10 @@ public class HandScore{
 	public boolean isStraight() {
 		boolean bool = false;
 		Collections.sort(myHand, Hand.COMPARE_BY_RANK);
-		if ((myHand.get(0).getCardRank() == (myHand.get(1).getCardRank() + 1))
-				&& (myHand.get(1).getCardRank() == (myHand.get(2).getCardRank() + 1))
-				&& (myHand.get(2).getCardRank() == (myHand.get(3).getCardRank() + 1))
-				&& (myHand.get(3).getCardRank() == (myHand.get(4).getCardRank() + 1))) {
+		if ((myHand.get(0).getCardRank()+1 == (myHand.get(1).getCardRank()))
+				&& (myHand.get(1).getCardRank()+1 == (myHand.get(2).getCardRank()))
+				&& (myHand.get(2).getCardRank()+1 == (myHand.get(3).getCardRank()))
+				&& (myHand.get(3).getCardRank()+1 == (myHand.get(4).getCardRank()))) {
 			bool = true;
 			this.HiHand = myHand.get(4).getCardRank();
 		}
