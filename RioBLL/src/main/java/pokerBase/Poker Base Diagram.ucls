@@ -3,7 +3,7 @@
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="pokerBase.Card" project="RioBLL" file="/RioBLL/src/main/java/pokerBase/Card.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="173" width="104" x="67" y="38"/>    
+    <position height="173" width="104" x="201" y="21"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,7 +12,7 @@
   </class>  
   <enumeration id="2" language="java" name="pokerBase.CardRank" project="RioBLL" 
     file="/RioBLL/src/main/java/pokerBase/CardRank.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="350" width="137" x="420" y="50"/>    
+    <position height="-1" width="-1" x="720" y="211"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -21,7 +21,7 @@
   </enumeration>  
   <class id="3" language="java" name="pokerBase.Deck" project="RioBLL" file="/RioBLL/src/main/java/pokerBase/Deck.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="282" y="445"/>    
+    <position height="-1" width="-1" x="335" y="548"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -30,7 +30,7 @@
   </class>  
   <class id="4" language="java" name="pokerBase.Hand" project="RioBLL" file="/RioBLL/src/main/java/pokerBase/Hand.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="203" width="178" x="246" y="168"/>    
+    <position height="203" width="178" x="451" y="419"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -39,7 +39,7 @@
   </class>  
   <class id="5" language="java" name="pokerBase.HandScore" project="RioBLL" 
     file="/RioBLL/src/main/java/pokerBase/HandScore.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="243" width="205" x="37" y="521"/>    
+    <position height="243" width="205" x="25" y="375"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -48,7 +48,7 @@
   </class>  
   <enumeration id="6" language="java" name="pokerBase.HandStrength" project="RioBLL" 
     file="/RioBLL/src/main/java/pokerBase/HandStrength.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="158" width="137" x="423" y="505"/>    
+    <position height="158" width="137" x="647" y="439"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -57,7 +57,7 @@
   </enumeration>  
   <class id="7" language="java" name="pokerBase.Player" project="RioBLL" 
     file="/RioBLL/src/main/java/pokerBase/Player.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="157" width="149" x="267" y="54"/>    
+    <position height="157" width="149" x="450" y="211"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -66,7 +66,7 @@
   </class>  
   <class id="8" language="java" name="pokerBase.Table" project="RioBLL" 
     file="/RioBLL/src/main/java/pokerBase/Table.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="448" y="53"/>    
+    <position height="-1" width="-1" x="488" y="98"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      

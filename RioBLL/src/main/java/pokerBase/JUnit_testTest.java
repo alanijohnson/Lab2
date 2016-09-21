@@ -47,8 +47,8 @@ public class JUnit_testTest {
 
    @Test
    public void test_onepair(){
-	   assertEquals(hand.getHandStrength(),20);
-	   assertEquals(hand.getHiHand(), 2);
+	   assertEquals(hand1.getHandStrength(),20);
+	   assertEquals(hand1.getHiHand(), 2);
 	     
    
    }
@@ -80,12 +80,12 @@ public class JUnit_testTest {
 		  
 	   }
 //Flush
-	   Hand hand5= new Hand(new Card(0, 2), new Card(0,1 ), new Card(2,9), new Card(0, 5), new Card(0,8));
+	   Hand hand5= new Hand(new Card(0, 2), new Card(0,1 ), new Card(0, 9), new Card(0, 5), new Card(0,8));
 
 	   @Test
 	   public void test_Flush(){
 		   assertEquals(hand5.getHandStrength(),60);
-		   assertEquals(hand5.getHiHand(),8 );
+		   assertEquals(hand5.getHiHand(),9 );
 
 	   }
 //Full House
@@ -117,18 +117,18 @@ public class JUnit_testTest {
 
 	   @Test
 	   public void test_StraightFlush(){
-		   assertEquals(hand8.getHandStrength(),30);
-		   assertEquals(hand8.getHiHand(), 3 );
-		   assertEquals(hand8.getLoHand(),2);
+		   assertEquals(hand8.getHandStrength(),90);
+		   assertEquals(hand8.getHiHand(), 5 );
+
 
 
 }
 
 //Royal Flush
-	   Hand hand9= new Hand(new Card(0, 12), new Card(1,11 ), new Card(2,10), new Card(1, 9), new Card(4,8));
+	   Hand hand9= new Hand(new Card(0, 12), new Card(0,11 ), new Card(0,10), new Card(0, 9), new Card(0,8));
 
 	   @Test
-	   public void test_RoyalFlush(){
+	   public void test_RoyalFlush(){ 
 		   assertEquals(hand9.getHandStrength(),100);
 		   assertEquals(hand9.getHiHand(), 12 );
 
