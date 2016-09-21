@@ -19,6 +19,14 @@ public class Hand {
 		//bScored = false;
 
 	}
+	public Hand(Card card1, Card card2, Card card3, Card card4, Card card5){
+		myHand.add(card1);
+		myHand.add(card2);
+		myHand.add(card3);
+		myHand.add(card4);
+		myHand.add(card5);
+	}
+	
 	
 	//hand score
 	public int getHandStrength(){
@@ -71,11 +79,24 @@ public class Hand {
 	}
 
 	public void AddCards(Deck deck) {
-		for (int i = 0; i < 5; i++) {
-			Card pick = deck.DrawCard();
-			// TODO delete print card
-			System.out.println("Card " + i + ": " + pick.getCardNbr());
-			myHand.add(pick);
+		//Deck returnedDeck = deck;
+		//if (deck.getDeckSize()>=5){
+			for (int i = 0; i < 5; i++) {
+				Card pick = deck.DrawCard();
+				// TODO delete print card
+				System.out.println("Card " + i + ": " + pick.getCardNbr());
+				myHand.add(pick);
+			}
+		//}
+		/*else{
+			Deck deck2 = new Deck();
+			System.out.println("New Deck was required");
+			deck = deck2;
+			this.AddCards(deck);
+			
+			}*/
 		}
+			
+			
 	}
-}
+
