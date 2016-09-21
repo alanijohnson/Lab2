@@ -33,7 +33,8 @@ public class Test_Deck {
 		hand.SortHand();
 		
 		//hand score testing
-		
+		System.out.println("\nHandScore");
+		HandScore hs = new HandScore();
 		}
 	}
 

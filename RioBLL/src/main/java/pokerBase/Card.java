@@ -9,8 +9,14 @@ public class Card {
  
 public Card(int iCardNmbr) {
 	this.iCardNmbr = iCardNmbr;
-	this.iCardSuit = iCardNmbr / 13;
+	this.iCardSuit = iCardNmbr / 13; 
 	this.iCardRank = iCardNmbr % 13;
+}
+
+public Card(int iCardSuit, int iCardRank) {
+	this.iCardNmbr = iCardSuit * 13 + iCardRank;
+	this.iCardSuit = iCardSuit; 
+	this.iCardRank = iCardRank;
 }
 
 public int getCardNbr(){
