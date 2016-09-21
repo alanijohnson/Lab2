@@ -31,10 +31,22 @@ public class Test_Deck {
 		hand.AddCards(deck1);
 		System.out.println("New Size: " + deck1.getDeckSize());
 		hand.SortHand();
-		
+				
 		//hand score testing
 		System.out.println("\nHandScore");
-		HandScore hs = new HandScore();
+		System.out.println(hand.getHandStrength());;
+		System.out.println(hand.getHiHand());
+		System.out.println(hand.getLoHand());
+		
+		//multiple hands
+		System.out.println("Hand 2");
+		Hand hand2 = new Hand();
+		hand2.AddCards(deck1);
+		ArrayList<Hand> hands1 = new ArrayList<>();
+		hands1.add(hand);
+		hands1.add(hand2);
+		HandScore hs2 = new HandScore();
+		hs2.ScoreHand(hands1);
 		}
 	}
 

@@ -1,6 +1,6 @@
 package pokerBase;
 
-import java.util.Comparator;
+//import java.util.Comparator;
 
 public class Card {
  private int iCardNmbr;

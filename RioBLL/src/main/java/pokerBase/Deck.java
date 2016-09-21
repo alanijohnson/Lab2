@@ -1,7 +1,7 @@
 package pokerBase;
 
 import java.util.ArrayList;
-import java.util.Collections;
+//import java.util.Collections;
 
 public class Deck {
 	private ArrayList<Card> mydeck; //my deck is only available to each instance
@@ -10,11 +10,9 @@ public class Deck {
 					}*/
 	
 	public Deck() {
-		//ArrayList<Integer> deckofcards = this.getDeckCards();
-		//int decksize = this.getDeckSize()
 		mydeck = getDeckCards();
+		//TODO delete println
 		System.out.println("Deck Created");
-		// TODO Auto-generated constructor stub
 	}
 
 	private ArrayList<Card> getDeckCards(){
@@ -26,7 +24,7 @@ public class Deck {
 				for (int i = 0; i <= 51; i++) {
 					getdeck.add(new Card(i));
 				}
-				
+				//Collections.shuffle(getdeck);
 				// shuffle the cards
 				for (int i = 0; i <= getdeck.size()-1; i++) {
 					int newindex = (int) (Math.random() * 51);
@@ -34,6 +32,7 @@ public class Deck {
 					getdeck.set(i, getdeck.get(newindex));
 					getdeck.set(newindex, temp);
 				}
+				//TODO delete println
 				// print shuffled deck
 				for (int i = 0; i <= getdeck.size()-1; i++) {
 					System.out.println(getdeck.get(i).getCardNbr());
@@ -54,6 +53,8 @@ public class Deck {
 		//draw first card in deck
 		Card card = mydeck.get(0);
 		mydeck.remove(0);
+		
+		//TODO delete print line
 		System.out.println("Print Card: " + card);
 		System.out.println(" ");
 		// print deck

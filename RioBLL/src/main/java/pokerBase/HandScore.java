@@ -7,19 +7,31 @@ import java.util.Comparator;
 
 public class HandScore{
 	private int Hand_Strength;
-	private int HiHand;
+	public int HiHand;
 	private int LoHand;
 	private ArrayList<Card> Kickers = new ArrayList<>();
-
-	public HandScore() {
+	private ArrayList<Card> myHand;
+	
+	//constructors
+	public HandScore(){
+	}
+	
+	public HandScore(ArrayList<Card> myHand) {
+		this.myHand = myHand;
 	}
 	
 	public Hand ScoreHand(ArrayList<Hand> Hands){
 		Collections.sort(Hands, HandScore.COMPARE_BY_STRENGTH);
-		return Hands.get(Hands.size()-1);
+		Hand winner = Hands.get(Hands.size()-1);
+		winner.SortHand();
+		//TODO remove print
+		System.out.println("Hand with " + winner.GetCard(0).getCardRank() +"," + winner.GetCard(1).getCardRank() +","+ winner.GetCard(2).getCardRank()+","
+				+ winner.GetCard(3).getCardRank()+"," + winner.GetCard(4).getCardRank() + " wins with a "+ winner.getHandStrength()+ "!");
+		return winner;
 	}
 	
-	public int ScoreHand(){
+	//score the hand using methods for each hand type test
+	public void ScoreHand(){
 		//TODO remove print line
 		System.out.println("Scoring Hand");
 		
@@ -65,17 +77,26 @@ public class HandScore{
 			this.HiHand = myHand.get(4).getCardRank();
 		}
 		//TODO remove print line
-		System.out.println(Hand_Strength);
-		return Hand_Strength;
+		System.out.println("Hand Strength: "+  Hand_Strength);
+		
+	}
+	
+	//get variables
+	public int getHandStrength(){
+		this.ScoreHand();
+		return this.Hand_Strength;
 	}
 	
 	public int getHiHand(){
+		this.ScoreHand();
 		return this.HiHand;
 	}
 	
 	public int getLoHand(){
+		this.ScoreHand();
 		return this.LoHand;
 	}
+	
 	
 	// Methods for each hand type
 
@@ -105,7 +126,7 @@ public class HandScore{
 		return bool;
 	}
 	
-	// Flush all cards have same suit
+	//6. Flush - all cards have same suit
 	public boolean isFlush() {
 		boolean bool = false;
 		Collections.sort(myHand, Hand.COMPARE_BY_SUIT);
@@ -117,7 +138,7 @@ public class HandScore{
 
 	}
 
-	// Four cards with same rank
+	//8. Four cards with same rank
 	public boolean isFour() {
 		boolean bool = false;
 		Collections.sort(myHand, Hand.COMPARE_BY_RANK);
@@ -133,7 +154,7 @@ public class HandScore{
 		return bool;
 	}
 
-	// Three cards with the same rank
+	//4. Three cards with the same rank
 	public boolean isThree() {
 		boolean bool = false;
 		Collections.sort(myHand, Hand.COMPARE_BY_RANK);
@@ -163,7 +184,7 @@ public class HandScore{
 		return bool;
 	}
 
-	// Set of 3 and Set of 2
+	//7. Full house - Set of 3 and Set of 2
 	public boolean isFullHouse() {
 		boolean bool = false;
 		Collections.sort(myHand, Hand.COMPARE_BY_RANK);
@@ -181,7 +202,7 @@ public class HandScore{
 		return bool;
 	}
 
-	// Straight 5 consecutive cards
+	//5. Straight - 5consecutive cards
 	public boolean isStraight() {
 		boolean bool = false;
 		Collections.sort(myHand, Hand.COMPARE_BY_RANK);
@@ -195,7 +216,7 @@ public class HandScore{
 		return bool;
 	}
 
-	// 1 pair of cards
+	//2. 1 pair of cards
 	public boolean is1Pair() {
 		boolean bool = false;
 		Collections.sort(myHand, Hand.COMPARE_BY_RANK);
@@ -233,7 +254,8 @@ public class HandScore{
 		}
 		return bool;
 	}
-
+	
+	//3. 2 pairs
 	public boolean is2Pairs() {
 		boolean bool = false;
 		Collections.sort(myHand, Hand.COMPARE_BY_RANK);
@@ -270,12 +292,4 @@ public class HandScore{
 	
 	
 }
-/*
- * 1. Royal Flush - Must be AKQJ10 of same suit High Card = 13 Low Card = 9 2.
- * Straight Flush - Must be Run of 5, same suit High Card - Low Card = 4 3. Four
- * of a Kind - Must be a Set of 4 If (Hand.get(0) == Hand.get(3) || Hand.get(1)
- * == Hand.get(4)) 4. Full house - Set of 2 (low) + Set of 4 (high) Set of 2
- * (high) + Set of 2 (low) 5. Flush - Same suit for all cards Sort by suit if
- * (hand.get 6. Straight - Run of 5 7. Three of a Kind - Set of 3 8. Pair - Set
- * of 2 + Set of 2 9. No Pair - use high card
- */
+
