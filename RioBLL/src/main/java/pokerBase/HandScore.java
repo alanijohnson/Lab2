@@ -3,12 +3,13 @@ package pokerBase;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 
 
 public class HandScore{
 	private int Hand_Strength;
 	public int HiHand;
-	private int LoHand;
+	private int LoHand = 0;
 	private ArrayList<Card> Kickers = new ArrayList<>();
 	private ArrayList<Card> myHand;
 	
@@ -21,9 +22,11 @@ public class HandScore{
 	}
 	
 	public Hand ScoreHand(ArrayList<Hand> Hands){
+		
+		Collections.sort(Hands, HandScore.COMPARE_BY_LOHAND);
+		Collections.sort(Hands, HandScore.COMPARE_BY_HIHAND);
 		Collections.sort(Hands, HandScore.COMPARE_BY_STRENGTH);
 		Hand winner = Hands.get(Hands.size()-1);
-		winner.SortHand();
 		return winner;
 	}
 	
@@ -280,6 +283,28 @@ public class HandScore{
 	    }
 	};
 	
+	public static Comparator<Hand> COMPARE_BY_HIHAND = new Comparator<Hand>() {
+	    public int compare(Hand hand1, Hand hand2) {
+	    return Integer.valueOf(hand1.getHiHand()).compareTo(hand2.getHiHand()); //ascending sort
+	    }
+	};
+	
+	public static Comparator<Hand> COMPARE_BY_LOHAND = new Comparator<Hand>() {
+	    public int compare(Hand hand1, Hand hand2) {
+	    return Integer.valueOf(hand1.getLoHand()).compareTo(hand2.getLoHand()); //ascending sort
+	    }
+	};
+	
+	/*public static Comparator<Hand> MULTICOMPARE_HAND = new Comparator<Hand>(List<Comparator<Hand>> comparators){
+		public int compare(Hand hand1, Hand hand2){
+			for (Comparator<Hand> comparator : comparators){
+				int comparison = comparator.compare(hand1, hand2);
+				if (comparison !=0) return comparison;
+			}
+			return 0;
+		}
+		
+	};*/
 	
 	
 	

@@ -39,14 +39,26 @@ public class Test_Deck {
 		System.out.println(hand.getLoHand());
 		
 		//multiple hands
-		System.out.println("Hand 2");
+		System.out.println("\n\n\n\n\n\n\nScoreTesting");
 		Hand hand2 = new Hand();
 		hand2.AddCards(deck1);
 		ArrayList<Hand> hands1 = new ArrayList<>();
-		hands1.add(hand);
-		hands1.add(hand2);
+		
+		Hand hand01= new Hand(new Card(0, 2), new Card(1,7 ), new Card(2,9), new Card(1, 0), new Card(4,3));
+		Hand hand02= new Hand(new Card(0, 2), new Card(1,7), new Card(2,10), new Card(1, 0), new Card(4,3));
+		Hand hand03= new Hand(new Card(0, 2), new Card(1,2 ), new Card(2,3), new Card(1, 3), new Card(4,9));
+		Hand hand04= new Hand(new Card(0, 1), new Card(1,1 ), new Card(2,3), new Card(1, 3), new Card(4,9));
+			
+		hands1.add(hand03);
+		hands1.add(hand02);
+		hands1.add(hand04);
+		hands1.add(hand01);
+		
+		
 		HandScore hs2 = new HandScore();
 		hs2.ScoreHand(hands1);
 		}
+	
+	
 	}
 
