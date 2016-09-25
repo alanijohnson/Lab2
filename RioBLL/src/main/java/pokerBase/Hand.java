@@ -65,12 +65,6 @@ public class Hand {
 	//other hand methods
 	public void SortHand() {
 		Collections.sort(myHand, Hand.COMPARE_BY_RANK);
-		// print deck
-		// TODO delete print deck
-		System.out.println("Printing Sorted Hand:");
-		for (int i = 0; i <= myHand.size() - 1; i++) {
-			System.out.println("Card - Rank: "+ myHand.get(i).getCardRank()+ " Suit: "+ myHand.get(i).getCardSuit());
-		}
 	}
 
 	
@@ -83,8 +77,6 @@ public class Hand {
 		//if (deck.getDeckSize()>=5){
 			for (int i = 0; i < 5; i++) {
 				Card pick = deck.DrawCard();
-				// TODO delete print card
-				System.out.println("Card " + i + ": " + pick.getCardNbr());
 				myHand.add(pick);
 			}
 		//}

@@ -12,7 +12,7 @@ public class HandScore{
 	private ArrayList<Card> Kickers = new ArrayList<>();
 	private ArrayList<Card> myHand;
 	
-	//constructorss
+	//constructors
 	public HandScore(){
 	}
 	
@@ -24,17 +24,11 @@ public class HandScore{
 		Collections.sort(Hands, HandScore.COMPARE_BY_STRENGTH);
 		Hand winner = Hands.get(Hands.size()-1);
 		winner.SortHand();
-		//TODO remove print
-		System.out.println("Hand with " + winner.GetCard(0).getCardRank() +"," + winner.GetCard(1).getCardRank() +","+ winner.GetCard(2).getCardRank()+","
-				+ winner.GetCard(3).getCardRank()+"," + winner.GetCard(4).getCardRank() + " wins with a "+ winner.getHandStrength()+ "!");
 		return winner;
 	}
 	
 	//score the hand using methods for each hand type test
-	public void ScoreHand(){
-		//TODO remove print line
-		System.out.println("Scoring Hand");
-		
+	public void ScoreHand(){	
 		//10. Royal Flush
 		if (this.isRoyalFlush()){
 			this.Hand_Strength = HandStrength.RoyalFlush.getValue();
@@ -76,12 +70,10 @@ public class HandScore{
 			Collections.sort(myHand, Hand.COMPARE_BY_RANK);
 			this.HiHand = myHand.get(4).getCardRank();
 		}
-		//TODO remove print line
-		System.out.println("Hand Strength: "+  Hand_Strength);
 		
 	}
 	
-	//get variables
+	//getters
 	public int getHandStrength(){
 		this.ScoreHand();
 		return this.Hand_Strength;
